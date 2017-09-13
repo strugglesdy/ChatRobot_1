@@ -1,6 +1,7 @@
 package com.chatRobot.po;
 
 import com.chatRobot.controller.validation.ValidationGroup1;
+import com.chatRobot.controller.validation.ValidationGroup2;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -19,7 +20,7 @@ public class Items {
     private String pic;
 
     //非空校验
-    @NotNull(message = "{items.createtime.isNULL}")
+    @NotNull(message = "{items.createtime.isNULL}",groups = {ValidationGroup2.class})
     private Date createtime;
 
     private String detail;
